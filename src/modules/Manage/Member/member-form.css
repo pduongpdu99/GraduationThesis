@@ -1,0 +1,147 @@
+.member-form{
+    position: fixed;
+    width: 100%;
+    height:100%;
+
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.member-form .member-box {
+    position: absolute;
+    background: white;
+    width: 600px;
+    height: fit-content;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    animation-name: float-up;
+    animation-duration: 1s;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.member-form .dark-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    
+    background: rgb(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.item-group {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin-bottom : 10px;
+    padding: 10px;
+}
+
+.item-group .title-label {
+    font-size: 24px;
+}
+
+.item-group .group {
+    display: -webkit-box;
+}
+
+.item-group .group .field {
+    width: fit-content; 
+    margin-right: 20px;
+}
+
+.under-background-line {
+    background: rgb(235, 235, 235);
+    width: 100%;
+    height: 5px;
+}
+
+.item-group .group .field .input-field, 
+.item-group .group .field .select {
+    border: 0px;
+    outline-style: none;
+    width: 200px;
+    padding: 15px;
+}
+
+.item-group .group .field .input-field:focus ~ .under-hightlight-line, 
+.item-group .group .field .select:focus ~ .under-hightlight-line {
+    width: 100%;
+    position: relative;
+    top: -5px;
+    background: linear-gradient(
+        90deg, 
+        rgb(133, 201, 253), 
+        rgb(11, 129, 255));
+}
+
+.item-group .group .field .under-hightlight-line {
+    height: 5px;
+    width: 0%;
+    position: relative;
+    transition: .5s;
+}
+
+.custom-button {
+    border: 0px;
+    border-radius: 2px;
+    padding: 10px 20px;
+    background: rgb(90, 186, 42);
+    position: absolute;
+    right: 40px;
+    width: 120px;
+
+    outline-style: none;
+    border: 0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    color: white;
+    bottom: 10px;
+}
+
+.custom-button:active {
+    background: rgb(66, 140, 29);
+}
+
+.custom-button.delete {
+    background: rgb(233, 92, 92);
+}
+
+.custom-button.delete:active {
+    background: rgb(177, 36, 36);
+}
+
+.member-form._1 {
+    display: block;
+}
+
+.member-form._0 {
+    display: none;
+}
+
+@keyframes float-up {
+    from {
+        top: 70%;
+        opacity: 0;
+    } to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes float-up {
+    from {
+        top: 70%;
+    } to {
+        top: 50%;
+    }
+}

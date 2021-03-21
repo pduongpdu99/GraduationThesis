@@ -1,0 +1,95 @@
+.dashboard-page {
+    position: relative;
+    top: 50px;
+    height: 100%;
+    overflow-y: hidden  ;
+}
+.dashboard-page .left {
+    width: 20%;
+    position: fixed;
+    display: inline;
+    background: #ededed;
+    height: -webkit-fill-available;
+    z-index: -1;
+    box-shadow: 0px 0px 1px black;
+}
+
+.dashboard-page .left .left-component {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dashboard-page .left .left-component .item {
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: .4s;
+    padding-left: 20px;
+}
+
+.dashboard-page .left .left-component .item.danger:hover {
+    background: rgb(228, 72, 72);
+    color: white;
+}
+
+.dashboard-page .left .left-component .item:hover {
+    background: rgb(172, 172, 172);
+    color: white;
+}
+
+.dashboard-page .right {
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    margin-left: 20%;
+}
+
+.dashboard-page .right .right-component {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: white;
+}
+
+.dashboard-page .right .right-component .box-component {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px grey;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+.dashboard-page .right .right-component .box-component .image-element { 
+    height: 70%;
+    width: 70%;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
+}
+
+.dashboard-page .right .right-component .box-component .image-element:hover {
+    opacity: .7;
+}
+
+.dashboard-page .right .right-component .box-component .label-element {
+    font-weight: bold;
+    font-size: 24px;
+    /* padding-left: 20px; */
+    border-top: 1px solid rgba(153, 153, 153, 0.212);
+    color: rgb(87, 87, 87);
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select:none;
+    text-decoration: none;
+}
